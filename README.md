@@ -6,7 +6,7 @@ This example showcases the use of the scatter-gather control flow to concurrentl
 
 The example utilizes two CSV files, `contacts_1.csv` and `contacts_2.csv`, located in the `resources` directory, as input data sources. Each CSV file represents contact information with the following structure:
 
-| Resource        | First Name | Last Name | Phone       | Email                     |
+| Resource        | First Name | Surname   | Phone       | Email                     |
 |-----------------|------------|-----------|-------------|---------------------------|
 | `contacts_1.csv`| John       | Doe       | 096548763   | john.doe@texasComp.com    |
 | `contacts_2.csv`| Jane       | Doe       | 091558780   | jane.doe@texasComp.com    |
@@ -15,8 +15,8 @@ The example utilizes two CSV files, `contacts_1.csv` and `contacts_2.csv`, locat
 
 ```json
 {
-  "firstName": "John",
-  "lastName": "Doe",
+  "firstname": "John",
+  "surname": "Doe",
   "phone": "096548763",
   "email": "john.doe@texasComp.com"
 }
@@ -44,14 +44,14 @@ GET http://localhost:9090/api/contacts
 ```json
 [
   {
-    "firstName": "John",
-    "lastName": "Doe",
+    "firstname": "John",
+    "surname": "Doe",
     "phone": "096548763",
     "email": "john.doe@texasComp.com"
   },
   {
-    "firstName": "Jane",
-    "lastName": "Doe",
+    "firstname": "Jane",
+    "surname": "Doe",
     "phone": "091558780",
     "email": "jane.doe@texasComp.com"
   }
@@ -66,14 +66,14 @@ The email will contain a JSON object, similar to this:
 {
   "contacts": [
     {
-      "firstName": "John",
-      "lastName": "Doe",
+      "firstname": "John",
+      "surname": "Doe",
       "phone": "096548763",
       "email": "john.doe@texasComp.com"
     },
     {
-      "firstName": "Jane",
-      "lastName": "Doe",
+      "firstname": "Jane",
+      "surname": "Doe",
       "phone": "091558780",
       "email": "jane.doe@texasComp.com"
     }
