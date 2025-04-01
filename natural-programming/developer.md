@@ -1,0 +1,1 @@
+The user requests to generate an integration based on a provided Readme file. The code should be simplified by removing redundancy between CsvContact and Contact classes as they represent the same entity. The readContactsFromCsv function in the HTTP resource function should run concurrently instead of sequentially.

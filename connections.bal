@@ -1,3 +1,11 @@
 import ballerinax/googleapis.gmail;
 
-final gmail:Client gmailClient = check new ({auth: {refreshToken: gmailRefreshToken, clientId: gmailClientId, clientSecret: gmailClientSecret}});
+final gmail:ConnectionConfig gmailConfig = {
+    auth: {
+        clientId: gmailClientId,
+        clientSecret: gmailClientSecret,
+        refreshToken: gmailRefreshToken
+    }
+};
+
+final gmail:Client gmailClient = check new (gmailConfig);
